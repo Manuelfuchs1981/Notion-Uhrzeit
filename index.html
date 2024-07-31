@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notion Uhr Widget</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: transparent;
+    }
+    .clock-container {
+        padding: 20px; /* Padding rundherum */
+        border: 5pt solid black; /* Schwarzer Rahmen */
+        border-radius: 10%; /* Abgerundete Ecken 10% */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent; /* Transparenter Hintergrund */
+    }
+    .time {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 300pt;
+        color: black;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+<div class="clock-container">
+    <div class="time" id="time">00:00</div>
+</div>
+<script>
+    function updateTime() {
+        const now = new Date();
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+
+        document.getElementById('time').textContent = `${hours}:${minutes}`;
+    }
+
+    setInterval(updateTime, 1000);
+    updateTime();
+</script>
+</body>
+</html>
