@@ -17,15 +17,16 @@
     }
     .clock-container {
         padding: 20px; /* Padding rundherum */
-        border: 3pt solid black; /* Schwarzer Rahmen */
+        border: 2pt solid black; /* Schwarzer Rahmen */
         display: flex;
         justify-content: center;
         align-items: center;
         background-color: transparent; /* Transparenter Hintergrund */
+        box-sizing: border-box;
     }
     .time {
         font-family: 'Orbitron', sans-serif;
-        font-size: 300pt;
+        font-size: calc(20px + 10vw); /* Responsive Schriftgröße */
         color: black;
         text-align: center;
     }
