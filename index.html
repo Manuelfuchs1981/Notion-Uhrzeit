@@ -9,24 +9,22 @@
 
     body {
         margin: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         height: 100vh;
         background-color: transparent;
+        position: relative;
     }
     .clock-container {
+        position: absolute;
+        top: 0;
+        left: 0;
         padding: 20px; /* Padding rundherum */
         border: 2pt solid black; /* Schwarzer Rahmen */
-        display: flex;
-        justify-content: center;
-        align-items: center;
         background-color: transparent; /* Transparenter Hintergrund */
         box-sizing: border-box;
     }
     .time {
         font-family: 'Orbitron', sans-serif;
-        font-size: calc(30px + 6vw); /* Größere Ausgangsschriftgröße */
+        font-size: calc(40px + 7vw); /* Größere Ausgangsschriftgröße */
         color: black;
         text-align: center;
     }
@@ -50,3 +48,4 @@
 </script>
 </body>
 </html>
+
